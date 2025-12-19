@@ -1,6 +1,7 @@
 import random
 from sqlalchemy.orm import sessionmaker
 from models import User, engine
+from sqlalchemy import or_
 
 
 Session = sessionmaker(bind=engine)
@@ -46,5 +47,5 @@ session = Session()
 # users = session.query(User).filter_by(age=25).all()
 # print(users)
 
-users = session.query(User).where(User.age >= 30).all()
+users = session.query(User).where(or_(User.age >= 30, User.name == "John")).all()
 print(users)
