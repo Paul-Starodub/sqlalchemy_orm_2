@@ -13,7 +13,7 @@ session = Session()
 # session.add(user_2)
 # session.commit()
 
-user = session.query(User).filter_by(id=2).one_or_none()
+user = session.query(User).filter_by(age=20).first()
 # print("users", users)
 
 # user = users[0]
