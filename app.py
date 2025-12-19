@@ -17,8 +17,8 @@ user = session.query(User).filter_by(id=1).one_or_none()
 # print("users", users)
 
 # user = users[0]
-print(user.name)
-user.name = "Jane"
+# print(user.name)
+# user.name = "Jane"
+session.delete(user)
 session.commit()
-print(user.name)
 
