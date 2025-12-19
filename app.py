@@ -14,4 +14,8 @@ session = Session()
 # session.commit()
 
 users = session.query(User).all()
-print("users", users)
+# print("users", users)
+
+user = users[0]
+print(user.name)
+
