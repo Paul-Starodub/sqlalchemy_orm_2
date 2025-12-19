@@ -36,9 +36,12 @@ session = Session()
 # users = session.query(User).order_by(User.age.desc(), User.name).all()
 # print(users)
 
-users_all = session.query(User).all()
+# users_all = session.query(User).all()
+#
+# users_filtered = session.query(User).filter(User.age >= 25, User.name=="John").all()
+#
+# print("all users: ", len(users_all))
+# print("filtered users: ", len(users_filtered))
 
-users_filtered = session.query(User).filter(User.age >= 25, User.name=="John").all()
-
-print("all users: ", len(users_all))
-print("filtered users: ", len(users_filtered))
+users = session.query(User).filter_by(age=25).all()
+print(users)
