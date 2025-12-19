@@ -33,5 +33,5 @@ session = Session()
 #
 # session.commit()
 
-users = session.query(User).order_by(User.age).all()
+users = session.query(User).order_by(User.age.desc()).all()
 print(users)
