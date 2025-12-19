@@ -13,7 +13,7 @@ session = Session()
 # session.add(user_2)
 # session.commit()
 
-users = session.query(User).all()
+users = session.query(User).filter_by(id=2).all()
 # print("users", users)
 
 user = users[0]
