@@ -38,7 +38,7 @@ session = Session()
 
 users_all = session.query(User).all()
 
-users_filtered = session.query(User).filter(User.age > 25).all()
+users_filtered = session.query(User).filter(User.age >= 25, User.name=="John").all()
 
 print("all users: ", len(users_all))
 print("filtered users: ", len(users_filtered))
