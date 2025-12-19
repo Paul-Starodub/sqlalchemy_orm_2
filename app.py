@@ -7,4 +7,3 @@ db_url = "sqlite:///database.db"
 engine = create_engine(db_url, echo=True)
 Base = declarative_base()
 Base.metadata.create_all(engine)
-
