@@ -15,5 +15,8 @@ class User(Base):
     name = Column(String)
     age = Column(Integer)
 
+    def __repr__(self) -> str:
+        return f"<User(name={self.name}, age={self.age})>"
+
 
 Base.metadata.create_all(engine)

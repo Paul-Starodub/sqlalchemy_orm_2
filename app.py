@@ -32,3 +32,6 @@ session = Session()
 #     session.add(user)
 #
 # session.commit()
+
+users = session.query(User).order_by(User.age).all()
+print(users)
