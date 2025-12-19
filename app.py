@@ -1,3 +1,4 @@
+import random
 from sqlalchemy.orm import sessionmaker
 from models import User, engine
 
@@ -22,3 +23,12 @@ session = Session()
 # session.delete(user)
 # session.commit()
 
+
+# names = ["Andrew", "John", "Jane", "Bob"]
+# ages = [20, 30, 25, 20, 22, 24, 21, 28, 60]
+#
+# for x in range(20):
+#     user = User(name=random.choice(names), age=random.choice(ages))
+#     session.add(user)
+#
+# session.commit()
