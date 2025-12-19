@@ -13,9 +13,9 @@ session = Session()
 # session.add(user_2)
 # session.commit()
 
-users = session.query(User).filter_by(id=2).all()
+user = session.query(User).filter_by(id=2).one_or_none()
 # print("users", users)
 
-user = users[0]
+# user = users[0]
 print(user.name)
 
